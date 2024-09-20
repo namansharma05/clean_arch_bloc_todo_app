@@ -19,7 +19,7 @@ class TodoRepositoryImpl implements TodoRepository {
 
   @override
   Future<List<TodoEntity>> getAllTodoEntity() async {
-    final result = await todoBox.values.map((todo) => todo.toEntity()).toList();
+    final result = todoBox.values.map((todo) => todo.toEntity()).toList();
     return result;
   }
 
